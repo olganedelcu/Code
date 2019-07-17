@@ -758,3 +758,14 @@ console.log(num === false);
 var s = 5;
 console.log(++s); // returns 5 ,then sets s to 6.
 console.log(s++); // sets s = 5, then returns 6.
+
+var personal = {
+  name: "Olga",
+  friend: ["Billy", 21],
+  get friend() {
+    return this.friend.map(function(friend) {
+      return `${this.name} knows ${friend}`;
+    });
+  }
+};
+console.log(personal.getFriend());
